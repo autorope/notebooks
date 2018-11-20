@@ -1,7 +1,1 @@
-donkeycar
-tensorflow
-jupyter
-notebook
-matplotlib
-opencv-python
 -e git://github.com/autorope/donkeybarn.git#egg=donkeybarn

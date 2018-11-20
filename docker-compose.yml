@@ -1,4 +1,4 @@
-version: '2.0'
+version: '2.3'
 services:
   notebooks_base:
     build:
@@ -11,8 +11,14 @@ services:
       service: notebooks_base
     ports:
       - "8888:8888"
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - .:/notebooks
-      - ../donkeybarn:/app/src/donkeybarn
+      - ~/.donkey_data:/root/.donkey_data
+      #load local repos for developement here.
+      - ../donkeybarn:/opt/src/donkeybarn
+      - ~/data/:/root/data
     tty: true
     stdin_open: true
