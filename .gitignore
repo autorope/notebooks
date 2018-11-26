@@ -21,3 +21,4 @@ build
 .pytest_cache
 
 .coverage
+.events.out
